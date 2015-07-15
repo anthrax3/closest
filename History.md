@@ -1,4 +1,9 @@
 
+1.0.0 / 2015-07-15
+==================
+
+  * BREAKING: rewrite to always check self. If you need the old functionality, do closest(el.parentNode, ...)
+
 0.1.4 / 2014-07-27
 ==================
 
