@@ -5,21 +5,18 @@ Finds the closest parent that matches a selector.
 
 ## API
 
-### closest(element, selector, checkSelf, within)
+### closest(element, selector, scope)
 
 * `element` - will check this elements parents
 * `selector` - CSS selector to match parents
-* `checkSelf` - check `element`.
-  If falsey, will begin with `element.parentNode` and is synonymous to `$.fn.parents`.
-  Otherwise, it's `$.fn.closest`.
-* `within` - check only within this element. By default, `document`.
+* `scope` - check this element and within. By default, `document.documentElement`.
 
 Example:
 
 ```js
 closest(document.body, 'html') === document.documentElement
-closest(document.body, 'body', true) === document.body
-closest(document.documentElement, 'html') == null
+closest(document.body, 'body') === document.body
+closest(document.documentElement, 'body') == null
 ```
 
 ## License

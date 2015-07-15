@@ -18,22 +18,27 @@
       var d3 = document.querySelector('#d3')
       var d4 = document.querySelector('#d3').cloneNode(true);
       var text = d3.firstChild;
+      var errors = false;
 
       assert(closest(d3, '#d2'), d2)
-      assert(closest(d3, '#d3'), undefined)
-      assert(closest(d3, '#d3', true), d3)
+      assert(closest(d3, '#d3'), d3)
+      assert(closest(d3, '#d3'), d3)
       assert(closest(d3, '#d1'), d1)
-      assert(closest(d3, '#d1', null, d2), undefined)
-      assert(closest(d3, '#d1', null, d1), d1)
-      assert(closest(d4, 'body'), undefined)
-      assert(closest(document.documentElement, '*'), undefined);
+      assert(closest(d3, '#d1', d2), null)
+      assert(closest(d3, '#d1', d1), d1)
+      assert(closest(d4, 'body'), null)
+      assert(closest(document.documentElement, '*'), document.documentElement);
       assert(closest(text, '#d1'), d1);
 
-      alert('ok')
+      if (!errors) {
+        console.log('all good!');
+      }
 
       function assert(el1, el2) {
-        if (el1 !== el2)
-          alert(new Error().stack)
+        if (el1 !== el2) {
+          errors = true;
+          console.log(new Error().stack)
+        }
       }
     </script>
   </body>
