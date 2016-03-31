@@ -2,7 +2,11 @@
  * Module Dependencies
  */
 
-var matches = require('matches-selector')
+try {
+  var matches = require('matches-selector')
+} catch (err) {
+  var matches = require('component-matches-selector')
+}
 
 /**
  * Export `closest`
