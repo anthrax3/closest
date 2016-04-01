@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "author": "Jonathan Ong",
   "dependencies": {
-    "component-matches-selector": "~0.1.5"
+    "component-matches-selector": "~0.1.6"
   },
   "browser": {
     "matches-selector": "component-matches-selector"
