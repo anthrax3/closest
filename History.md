@@ -1,4 +1,10 @@
 
+1.0.1 / 2016-04-01
+==================
+
+  * component, package: bump matches-selector dependency to 0.1.6 (#4, @ockham)
+  * index: fall back to `require('component-matches-selector')` (#3, @ockham)
+
 1.0.0 / 2015-07-15
 ==================
 
